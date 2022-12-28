@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="792.8,500" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="792.8,1407.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="60">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -30,10 +30,13 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-    </sco:Collection>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="45">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -61,26 +64,95 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,435.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="593.6,1342.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="ArrayOrase">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="New String(5){}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="s:Double[]" Name="ArrayTemp">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="s:Double[]" ExpressionText="New Double(5){}" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Prognoză şi condiţii meteo pentru Bucharest, B - The Weather Channel | Weather.c" sap:VirtualizedContainerService.HintSize="433.6,323.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9ffc8384-faaa-4071-8a74-314fc243e4db" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Deschidere WEATHER" sap:VirtualizedContainerService.HintSize="531.2,1230.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9ffc8384-faaa-4071-8a74-314fc243e4db" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,106.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do-Deschidere WEATHER" sap:VirtualizedContainerService.HintSize="497.6,1013.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="numarOrase" />
+              <Variable x:TypeArguments="x:Int32" Name="i">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:Int32" />
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign NUMAR_ORASE" sap:VirtualizedContainerService.HintSize="435.2,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[numarOrase]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">5</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While EXTRACT" sap:VirtualizedContainerService.HintSize="435.2,779.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="EXTRACT" sap:VirtualizedContainerService.HintSize="400,612" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Introduce ORASUL" sap:VirtualizedContainerService.HintSize="337.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;Introduceti orasul (&quot; + (i+1).ToString +&quot;/&quot;+numarOrase.ToString+&quot;)&quot;]" Title="Oras">
+                    <ui:InputDialog.Result>
+                      <OutArgument x:TypeArguments="x:String">[ArrayOrase(i)]</OutArgument>
+                    </ui:InputDialog.Result>
+                  </ui:InputDialog>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Scrie numele Orasului in SEARCH" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9ffc8384-faaa-4071-8a74-314fc243e4db" Text="[ArrayOrase(i) + &quot;[k(enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://weather.com/ro-RO/vreme/astazi/l/ROXX0003:1:RO?Goto=Redirected" DesignTimeRectangle="780, 169, 475, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT LocationSearch_in…'" FullSelectorArgument="&lt;webctrl id='LocationSearch_input' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='LocationSearch_input' tag='INPUT' type='text' class='SearchInput--InputField--1UoCv Search--inputClass--1FEhl' aaname='Căutare oraș sau cod poștal' /&gt;" Guid="9175bf01-e39d-4450-8cf0-dfea6fa64e8d" ImageBase64="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" InformativeScreenshot="9cb33758275bb4cda263bbf6505421be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Prognoză şi condiţii meteo pentru Bucharest, B - The Weather Channel | Weather.com' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i &lt; numarOrase" />
+              </ui:InterruptibleWhile.Condition>
+            </ui:InterruptibleWhile>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
